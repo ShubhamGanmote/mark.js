@@ -13,13 +13,13 @@
 <body>
     <h1>Hellow World for Mark.js</h1>
     <div class="context">
-        Hello world is the text here. Hello should get highlighted. Hello world is the text here. Hello should get
-        highlighted.
+        Hello world is the text here. I am searching for the text "Hellow Text" so only that should
+        get highlighted and not the individual Hello or world.
     </div>
     <script type="text/javascript">
         //alert('Javascript working');
         var markInstance = new Mark(document.querySelector("div.context"));
-        markInstance.mark(["Hello", "world"], {
+        markInstance.mark(["Hello world"], {
             "element": "mark",
             "className": "highlighted",
             "acrossElements": true,
@@ -28,10 +28,12 @@
                 console.log('Finished highlighting ' + counter);
             }
         });
+        /**
         markInstance.markRanges([{
             start: 15,
             length: 5
         }]);
+        **/
 
     </script>
 </body>
